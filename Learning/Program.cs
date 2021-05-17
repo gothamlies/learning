@@ -23,19 +23,23 @@ namespace Learning
                 Console.Write(mas[i]);
             }
 
-            Console.WriteLine();
-
             for (int i = 0; i < mas.Length; i++)
             {
-                if (mas[i] % 2 == 0)
+                for (int j = 1; j < mas.Length - i; j++)
                 {
-                    sum = sum + mas[i];                   
+                    if (mas[j] < mas[j - 1])
+                    {
+                        int s = mas[j];
+                        mas[j] = mas[j - 1];
+                        mas[j - 1] = s;
+                    }
                 }
+          
             }
 
-            Console.Write("Чётные: " + sum);
-
             Console.WriteLine();
+            Console.Write("Отсортированный массив: ");
+            Console.Write(mas[0] + "  ");
         }
 
     }
