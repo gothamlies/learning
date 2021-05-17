@@ -10,7 +10,23 @@ namespace Learning
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello world!");
+            int n;
+
+            Console.WriteLine("Введите число элементов массива");
+            n = int.Parse(Console.ReadLine());
+            int[] mas = new int[n];
+
+            for (int i = 0; i < mas.Length; i++)
+            {
+                mas[i] = int.Parse(Console.ReadLine());
+            }
+
+            Console.WriteLine("Числа массива:");
+            for (int i = 0; i < mas.Length; i++)
+            {
+                Console.WriteLine(mas[i]);
+            }
+
         }
     }
 }
