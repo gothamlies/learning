@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Learning
 {
@@ -10,9 +6,9 @@ namespace Learning
     {
         static void Main(string[] args)
         {
-            int n;
+            int n, sum = 0;
 
-            Console.WriteLine("Введите число элементов массива");
+            Console.WriteLine("Количество элеметнов");
             n = int.Parse(Console.ReadLine());
             int[] mas = new int[n];
 
@@ -21,12 +17,26 @@ namespace Learning
                 mas[i] = int.Parse(Console.ReadLine());
             }
 
-            Console.WriteLine("Числа массива:");
+            Console.WriteLine("Массив: ");
             for (int i = 0; i < mas.Length; i++)
             {
-                Console.WriteLine(mas[i]);
+                Console.Write(mas[i]);
             }
 
+            Console.WriteLine();
+
+            for (int i = 0; i < mas.Length; i++)
+            {
+                if (mas[i] % 2 == 0)
+                {
+                    sum = sum + mas[i];                   
+                }
+            }
+
+            Console.Write("Чётные: " + sum);
+
+            Console.WriteLine();
         }
+
     }
 }
